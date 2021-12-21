@@ -4,10 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Bootstrap
+import "jquery/dist/jquery.min.js"
+import "popper.js/dist/umd/popper.min.js"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap.min.js"
+
+//Redux
+import rootReducer from "./redux"
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store = {store}>
+    <App/>
+  </Provider>,
   document.getElementById('root')
 );
 
