@@ -20,7 +20,7 @@ class Computer extends Component {
                 </style>
                 <div className='think' style={{ position: "relative" }}>
                     <img
-                        style={{ position: 'absolute', animation: `randomItem${Date.now()} 0.5s`, left: "5%", transform: 'rotate(180deg)'}}
+                        style={{ position: 'absolute', animation: `randomItem${Date.now()} 0.5s`, left: "5%", transform: 'rotate(120deg)'}}
                         width={75}
                         src={computer.image}
                         alt={computer.image} />

@@ -44,6 +44,9 @@ const mapDispatchToProps = (dispatch) =>{
                 count++
                 if (count >= 10){
                     clearInterval(randomLimit)
+                    dispatch({
+                        type: 'END_GAME'
+                    })
                 }
             }, 100)
         },
